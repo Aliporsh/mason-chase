@@ -27,7 +27,7 @@ namespace Afshar_test
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Afshar.Test", Version = "v1" });
@@ -55,7 +55,7 @@ namespace Afshar_test
             app.UseRouting();
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Afshar.Test v1"));
-         
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

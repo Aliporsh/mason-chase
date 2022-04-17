@@ -39,7 +39,7 @@ namespace Afshar_test.Controllers
         {
             return customerService.GetCustomer(id);
         }
-        [HttpGet]
+        [HttpPost]
         public void UpdateCustomer(Customer customer)
         {
              customerService.UpdateCustomer(customer);
